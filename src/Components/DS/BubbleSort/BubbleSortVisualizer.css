@@ -1,0 +1,42 @@
+/* src/BubbleSortVisualizer.css */
+.bubble-sort-container {
+  text-align: center;
+}
+
+.bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 20px 0;
+}
+
+.bar {
+  width: 30px;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: black;
+  font-weight: bold;
+}
+
+.steps-container {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.step {
+  margin: 5px 0;
+}
+
+.navigation {
+  margin-top: 20px;
+}
+
+.navigation button {
+  margin: 0 10px;
+}
