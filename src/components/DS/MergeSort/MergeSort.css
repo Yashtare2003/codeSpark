@@ -1,0 +1,69 @@
+.container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .input-section {
+    margin: 20px 0;
+  }
+  
+  .bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 20px 0;
+  }
+  
+  .bars {
+    display: flex;
+    height: 200px;
+    border-left: 2px solid black;
+  }
+  
+  .bar {
+    width: 40px;
+    margin: 0 5px;
+    background-color: lightblue;
+    transition: height 0.3s;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .bar.left {
+    background-color: lightcoral;
+  }
+  
+  .bar.right {
+    background-color: lightgreen;
+  }
+  
+  .bar.mid {
+    background-color: orange;
+  }
+  
+  .bar.found {
+    background-color: yellow;
+  }
+  
+  .log-container {
+    margin: 20px 0;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  .log-entry {
+    margin: 5px 0;
+    text-align: left;
+  }
+  
+  .button-container {
+    margin: 10px 0;
+  }
+  .result-message {
+    margin: 20px 0;
+    font-size: 16px;
+    color: blue;
+  }
+  
