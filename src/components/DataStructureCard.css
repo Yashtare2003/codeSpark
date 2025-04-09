@@ -1,0 +1,39 @@
+.card {
+    cursor: pointer; /* Show pointer cursor on hover */
+    border: 1px solid #ddd; /* Add border */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure contents do not overflow */
+    transition: transform 0.2s ease; /* Smooth scaling effect on hover */
+    height: 200px; /* Adjust height of the card */
+    display: flex;
+    flex-direction: column; /* Stack image and title vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Slightly scale up the card on hover */
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column; /* Stack image and title vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100%; /* Full height to allow centering */
+  }
+  
+  .card-image {
+    max-width: 150px; /* Set a fixed width for images */
+    max-height: 100px; /* Set a fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio and cover area */
+  }
+  
+  .card-title {
+    margin-top: 8px; /* Space between image and title */
+    text-align: center; /* Center the text */
+    font-size: 1rem; /* Adjust font size for the title */
+    color: darkblue; /* Change text color if needed */
+    font-weight: bold; /* Make text bold */
+  }
+  
+  
