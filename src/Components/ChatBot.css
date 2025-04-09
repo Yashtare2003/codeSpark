@@ -1,0 +1,112 @@
+/* src/App.css or src/components/ChatBot.css */
+.chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: -300px; /* Start off-screen */
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: right 0.5s ease; /* Smooth transition */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it appears above other elements */
+  }
+  
+  .chatbot.open {
+    right: 0; /* Move to visible position */
+    width: 40%; /* Expand to 40% width when open */
+  }
+  
+  .chat-window {
+    flex-grow: 1; /* Allow it to grow */
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 300px; /* Set a fixed height to contain the scroll */
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional border for styling */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+   
+  }
+  
+  /* Optional: Style for scrollbar (for webkit browsers) */
+  .chat-window::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+  
+  .chat-window::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  .chat-window::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color when hovering */
+  }
+  
+  .message {
+    margin: 5px 0;
+  }
+  
+  .user {
+    text-align: right;
+  }
+  
+  .ai {
+    text-align: left;
+  }
+  
+  form {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+   
+    border-top: 1px solid #ccc;
+  }
+  
+  .chatbot input {
+    width: 70%;
+    height: 3vw;
+    /* flex-grow: 1; */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* display: none; */
+  }
+  
+  .chatbot form button {
+    padding: 5px;
+    width: 4vw;
+    height: 3vw;
+    margin-left: 5px;
+    background-color: #059862;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Sticky chat icon style */
+  .sticky-chat-icon {
+    width:20%;
+    height:20%;
+    position: fixed;
+    right: -40px; /* Position from the right */
+    top: 80%; /* Centered vertically */
+    transform: translateY(-50%); /* Adjust for centering */
+    background-color: transparent; /* Background color for the icon */
+   
+    color: white; /* Icon color */
+    cursor: pointer; /* Pointer cursor */
+    z-index: 1000; /* Ensure it appears above other elements */
+    display: flex;
+    justify-content: flex-end;
+  }
+  .sticky-chat-icon img{
+    width: auto;
+    height: 100%;
+  }
+  
