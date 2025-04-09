@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="src/assets/logo1.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <title>AlgoVizPro</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script>
+        window.onload = function() {
+            const minWidth = 1024; // Set your desired minimum width (e.g., 1024px for laptops)
+            const root = document.getElementById("root");
+
+            if (window.innerWidth < minWidth) {
+                // Replace the root content with a message
+                root.innerHTML = `
+                    <div style="display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center; background-color: #f3ecea; color: #333;">
+                        <h1 style="font-size: 2rem;">For a Better Experience</h1>
+                        <p style="font-size: 1.2rem;">
+                            Please open this site on a laptop or desktop computer, or select desktop mode.
+                        </p>
+                    </div>
+                `;
+            } else {
+                // Initialize your application normally
+                const lenis = new Lenis();
+
+                lenis.on("scroll", (e) => {
+                    console.log(e);
+                });
+
+                function raf(time) {
+                    lenis.raf(time);
+                    requestAnimationFrame(raf);
+                }
+
+                requestAnimationFrame(raf);
+            }
+        };
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
